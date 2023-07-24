@@ -1,1 +1,1 @@
-Hello, Java-8!
+Hello, Java!
