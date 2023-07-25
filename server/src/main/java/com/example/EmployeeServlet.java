@@ -6,7 +6,7 @@ import java.io.*;
 import java.sql.*;
 import javax.servlet.http.*;
 
-public class UsersServlet extends HttpServlet {
+public class EmployeeServlet extends HttpServlet {
     private static final String JDBC_URL = "jdbc:postgresql://192.168.0.126:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASS = "postgres";
@@ -20,7 +20,7 @@ public class UsersServlet extends HttpServlet {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM employees");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
 
             out.println("<html><body><h2>Users List</h2><ul>");
 
@@ -29,7 +29,7 @@ public class UsersServlet extends HttpServlet {
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
                 double surname = resultSet.getDouble("surname");
-                out.println("<li>Employee ID: " + id + ", Name: " + name + ", Age: " + age + ", Surname: " + surname + "</li>");
+                out.println("<li>User ID: " + id + ", Name: " + name + ", Age: " + age + ", Surname: " + surname + "</li>");
             }
 
             out.println("</ul></body></html>");
