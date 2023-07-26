@@ -14,7 +14,7 @@
     <url-pattern>/users</url-pattern>
   </servlet-mapping>
 
-  <display-name>Webapp</display-name>
+<!--  <display-name>Webapp</display-name>-->
   <!--
   <servlet>
   <servlet-name>HelloWorldExample</servlet-name>
