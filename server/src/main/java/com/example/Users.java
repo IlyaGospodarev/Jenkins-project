@@ -6,7 +6,7 @@ import java.io.*;
 import java.sql.*;
 import javax.servlet.http.*;
 
-public class EmployeeServlet extends HttpServlet {
+public class Users extends HttpServlet {
     private static final String JDBC_URL = "jdbc:postgresql://192.168.0.126:5432/postgres";
     private static final String DB_USER = "postgres";
     private static final String DB_PASS = "postgres";
@@ -28,7 +28,7 @@ public class EmployeeServlet extends HttpServlet {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 int age = resultSet.getInt("age");
-                double surname = resultSet.getDouble("surname");
+                String surname = resultSet.getString("surname");
                 out.println("<li>User ID: " + id + ", Name: " + name + ", Age: " + age + ", Surname: " + surname + "</li>");
             }
 

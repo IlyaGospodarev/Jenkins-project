@@ -3,6 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
+
+  <servlet>
+    <servlet-name>Users</servlet-name>
+    <servlet-class>Users</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Users</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+
   <display-name>Webapp</display-name>
   <!--
   <servlet>
